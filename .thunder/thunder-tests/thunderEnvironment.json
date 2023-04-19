@@ -9,7 +9,7 @@
     "data": [
       {
         "name": "host",
-        "value": "https://stage-svc-crud.deno.dev"
+        "value": "https://stage-svc-clau.deno.dev"
       }
     ]
   },
@@ -23,7 +23,7 @@
     "data": [
       {
         "name": "host",
-        "value": "https://prod-svc-crud.deno.dev"
+        "value": "https://prod-svc-clau.deno.dev"
       }
     ]
   },

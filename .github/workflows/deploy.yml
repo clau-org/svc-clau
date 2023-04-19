@@ -12,7 +12,7 @@ on:
           - stage
           - prod
 
-run-name: "Deploy svc-crud to '${{ inputs.env }}' by ${{ github.actor }}"
+run-name: "Deploy svc-clau to '${{ inputs.env }}' by ${{ github.actor }}"
 
 env:
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

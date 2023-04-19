@@ -1,5 +1,5 @@
 {
-  "name": "svc-crud",
+  "name": "svc-clau",
   "version": "0.0.0",
   "tasks": {
     "env:stage": "cp .env.stage .env",
@@ -10,8 +10,8 @@
     "preview": "deno run -A src/main.ts",
     "db:generate": "deno run -A npm:prisma@latest generate --data-proxy --schema=./src/database/schema.prisma",
     "db:push": "deno run -A npm:prisma@latest db push --schema=./src/database/schema.prisma",
-    "deploy:stage": "deployctl deploy --project='stage-svc-crud' --prod --exclude='node_modules' src/main.ts ",
-    "deploy:prod": "deployctl deploy --project='prod-svc-crud'  --prod --exclude='node_modules' src/main.ts "
+    "deploy:stage": "deployctl deploy --project='stage-svc-clau' --prod --exclude='node_modules' src/main.ts ",
+    "deploy:prod": "deployctl deploy --project='prod-svc-clau'  --prod --exclude='node_modules' src/main.ts "
   },
   "fmt": {
     "files": {
