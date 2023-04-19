@@ -36,8 +36,8 @@ jobs:
       - name: Setup environment ⚒️
         run: deno task env:${{ inputs.env }}
 
-      - name: Generate db client ⚒️
-        run: deno task db:generate
+      # - name: Generate db client ⚒️
+      #   run: deno task db:generate
 
       # - name: Test 🥑
       #   run: deno task test
