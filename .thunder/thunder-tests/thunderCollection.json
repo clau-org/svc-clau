@@ -39,6 +39,76 @@
         "containerId": "c60e87ba-dd73-4809-a574-802bff2e7b1a",
         "created": "2023-04-19T19:22:04.507Z",
         "sortNum": 80000
+      },
+      {
+        "_id": "d927266c-0c67-4650-8fec-3fabacdab757",
+        "name": "platforms",
+        "containerId": "",
+        "created": "2023-04-19T19:48:02.903Z",
+        "sortNum": 50000
+      },
+      {
+        "_id": "653fcb66-a275-4e75-8c3a-14190a021927",
+        "name": "create",
+        "containerId": "d927266c-0c67-4650-8fec-3fabacdab757",
+        "created": "2023-04-19T19:48:02.904Z",
+        "sortNum": 50000
+      },
+      {
+        "_id": "449c076d-195a-41ae-a7ce-cb3cb7cfbb3a",
+        "name": "read",
+        "containerId": "d927266c-0c67-4650-8fec-3fabacdab757",
+        "created": "2023-04-19T19:48:02.905Z",
+        "sortNum": 60000
+      },
+      {
+        "_id": "818329b5-bb33-47d5-9c1d-0f6ec42f05f9",
+        "name": "update",
+        "containerId": "d927266c-0c67-4650-8fec-3fabacdab757",
+        "created": "2023-04-19T19:48:02.906Z",
+        "sortNum": 70000
+      },
+      {
+        "_id": "73a33305-dc77-453b-bf74-cb75f3b7ba18",
+        "name": "delete",
+        "containerId": "d927266c-0c67-4650-8fec-3fabacdab757",
+        "created": "2023-04-19T19:48:02.907Z",
+        "sortNum": 80000
+      },
+      {
+        "_id": "19904957-3ef2-4e09-8c3b-d20b0c429260",
+        "name": "organizations",
+        "containerId": "",
+        "created": "2023-04-19T19:48:11.072Z",
+        "sortNum": 60000
+      },
+      {
+        "_id": "c4620340-d0ca-42f8-b573-f87cc0f67d7e",
+        "name": "create",
+        "containerId": "19904957-3ef2-4e09-8c3b-d20b0c429260",
+        "created": "2023-04-19T19:48:11.073Z",
+        "sortNum": 50000
+      },
+      {
+        "_id": "db5b52a8-2aff-4829-af66-ee00a3ab05ed",
+        "name": "read",
+        "containerId": "19904957-3ef2-4e09-8c3b-d20b0c429260",
+        "created": "2023-04-19T19:48:11.074Z",
+        "sortNum": 60000
+      },
+      {
+        "_id": "f064ef8b-ad8f-42cd-adf0-246650acf524",
+        "name": "update",
+        "containerId": "19904957-3ef2-4e09-8c3b-d20b0c429260",
+        "created": "2023-04-19T19:48:11.075Z",
+        "sortNum": 70000
+      },
+      {
+        "_id": "6372c179-0165-47ba-ac7b-4f84c430bc28",
+        "name": "delete",
+        "containerId": "19904957-3ef2-4e09-8c3b-d20b0c429260",
+        "created": "2023-04-19T19:48:11.076Z",
+        "sortNum": 80000
       }
     ]
   }

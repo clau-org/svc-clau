@@ -13,12 +13,64 @@ datasource db {
 }
 
 model users {
+    // Base
     id        String    @id @default(auto()) @map("_id") @db.ObjectId
     uuid      String    @unique @default(uuid())
     createdAt DateTime? @default(now())
     updatedAt DateTime? @updatedAt()
 
-    email String
-    name  String?
-    phone String?
+    //  Data
+    email     String?   @unique
+    phone     String?   @unique
+    name      String?
+    birthDate DateTime?
+
+    // Platforms to which the user belongs
+    platform_ids String[]    @db.ObjectId
+    platforms    platforms[] @relation(name: "platform_users", fields: [platform_ids], references: [id])
+
+    // Organizations to which the user belongs
+    organization_ids String[]        @db.ObjectId
+    organizations    organizations[] @relation(name: "organization_user", fields: [organization_ids], references: [id])
+}
+
+model platforms {
+    // Base
+    id        String    @id @default(auto()) @map("_id") @db.ObjectId
+    uuid      String    @unique @default(uuid())
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @updatedAt()
+
+    // Data
+    key      String  @unique
+    username String? @unique
+    name     String?
+
+    // Users belonging to the platform
+    user_ids String[] @db.ObjectId
+    users    users[]  @relation(name: "platform_users", fields: [user_ids], references: [id])
+
+    // Organization belonging to the platform
+    organization_ids String[]        @db.ObjectId
+    organizations    organizations[] @relation(name: "platform_organizations", fields: [organization_ids], references: [id])
+}
+
+model organizations {
+    // Base
+    id        String    @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @updatedAt()
+    uuid      String    @unique @default(uuid())
+
+    // Data
+    username String? @unique
+    name     String?
+
+    // Platforms to which the organization belongs
+    platform_ids String[]    @db.ObjectId
+    platforms    platforms[] @relation(name: "platform_organizations", fields: [platform_ids], references: [id])
+
+    // Users belonging to the organization
+    user_ids String[] @db.ObjectId
+    users    users[]  @relation(name: "organization_user", fields: [user_ids], references: [id])
 }

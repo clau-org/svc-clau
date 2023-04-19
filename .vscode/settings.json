@@ -8,5 +8,8 @@
   },
   "thunder-client.saveToWorkspace": true,
   "thunder-client.defaultUrl": "http://localhost:8000",
-  "thunder-client.workspaceRelativePath": ".thunder"
+  "thunder-client.workspaceRelativePath": ".thunder",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
