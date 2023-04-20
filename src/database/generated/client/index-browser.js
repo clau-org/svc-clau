@@ -13,12 +13,12 @@ const Prisma = {}
 exports.Prisma = Prisma
 
 /**
- * Prisma Client JS version: 4.12.0
- * Query Engine version: 659ef412370fa3b41cd7bf6e94587c1dfb7f67e7
+ * Prisma Client JS version: 4.11.0
+ * Query Engine version: 8fde8fef4033376662cad983758335009d522acb
  */
 Prisma.prismaVersion = {
-  client: "4.12.0",
-  engine: "659ef412370fa3b41cd7bf6e94587c1dfb7f67e7"
+  client: "4.11.0",
+  engine: "8fde8fef4033376662cad983758335009d522acb"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -89,6 +89,29 @@ Prisma.NullTypes = {
 // https://github.com/microsoft/TypeScript/issues/3192#issuecomment-261720275
 function makeEnum(x) { return x; }
 
+exports.Prisma.OrganizationsScalarFieldEnum = makeEnum({
+  id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  uuid: 'uuid',
+  username: 'username',
+  name: 'name',
+  platform_ids: 'platform_ids',
+  user_ids: 'user_ids'
+});
+
+exports.Prisma.PlatformsScalarFieldEnum = makeEnum({
+  id: 'id',
+  uuid: 'uuid',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  key: 'key',
+  username: 'username',
+  name: 'name',
+  user_ids: 'user_ids',
+  organization_ids: 'organization_ids'
+});
+
 exports.Prisma.QueryMode = makeEnum({
   default: 'default',
   insensitive: 'insensitive'
@@ -105,13 +128,18 @@ exports.Prisma.UsersScalarFieldEnum = makeEnum({
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   email: 'email',
+  phone: 'phone',
   name: 'name',
-  phone: 'phone'
+  birthDate: 'birthDate',
+  platform_ids: 'platform_ids',
+  organization_ids: 'organization_ids'
 });
 
 
 exports.Prisma.ModelName = makeEnum({
-  users: 'users'
+  users: 'users',
+  platforms: 'platforms',
+  organizations: 'organizations'
 });
 
 /**

@@ -38,19 +38,25 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "b2df54b5-4afe-4fd4-984f-bd9caed41521",
     "name": "update",
-    "url": "{{host}}/users/update?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
-    "method": "GET",
+    "url": "{{host}}/users/update",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-04-19T19:22:02.341Z",
-    "modified": "2023-04-19T19:34:21.829Z",
+    "modified": "2023-04-20T17:17:27.551Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
         "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "isDisabled": true,
         "isPath": false
       }
     ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"uuid\" : \"338e14a9-4129-4a8f-9959-152ceb6d5b4f\",\n  \"email\" : \"somex@email.com\",\n  \"platform_ids\": [\"64416af84f0126292d1ec2bf\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -98,19 +104,37 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "653fcb66-a275-4e75-8c3a-14190a021927",
     "name": "create",
-    "url": "{{host}}/users/create?email=somexx@email.com",
-    "method": "GET",
+    "url": "{{host}}/platforms/create",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:02.903Z",
-    "modified": "2023-04-19T19:48:02.903Z",
+    "modified": "2023-04-20T16:55:45.254Z",
     "headers": [],
     "params": [
       {
-        "name": "email",
-        "value": "somexx@email.com",
+        "name": "key",
+        "value": "unakey5",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "username",
+        "value": "DanPrimero",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "name",
+        "value": "El Dan",
+        "isDisabled": true,
         "isPath": false
       }
     ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"key\": \"key\",\n  \"username\" : \"DanCuatro\",\n  \"name\": \"Daniel\",\n  \"user_ids\": [\"64416af84f0126292d1ec2bf\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -118,11 +142,11 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "449c076d-195a-41ae-a7ce-cb3cb7cfbb3a",
     "name": "all",
-    "url": "{{host}}/users/read",
+    "url": "{{host}}/platforms/read",
     "method": "GET",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:02.904Z",
-    "modified": "2023-04-19T19:48:02.903Z",
+    "modified": "2023-04-20T16:30:07.559Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -132,16 +156,16 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "449c076d-195a-41ae-a7ce-cb3cb7cfbb3a",
     "name": "one",
-    "url": "{{host}}/users/read?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+    "url": "{{host}}/platforms/read?uuid=c6170805-5880-4f46-a686-877561dd0ce5",
     "method": "GET",
     "sortNum": 50000,
     "created": "2023-04-19T19:48:02.905Z",
-    "modified": "2023-04-19T19:48:02.903Z",
+    "modified": "2023-04-20T16:35:13.456Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "c6170805-5880-4f46-a686-877561dd0ce5",
         "isPath": false
       }
     ],
@@ -152,19 +176,37 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "818329b5-bb33-47d5-9c1d-0f6ec42f05f9",
     "name": "update",
-    "url": "{{host}}/users/update?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
-    "method": "GET",
+    "url": "{{host}}/platforms/update",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:02.906Z",
-    "modified": "2023-04-19T19:48:02.903Z",
+    "modified": "2023-04-20T16:53:56.163Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "0058353d-3577-4081-9d93-9d5fce5a882e",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "username",
+        "value": "DanTercero",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "name",
+        "value": "El otro Dan",
+        "isDisabled": true,
         "isPath": false
       }
     ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"uuid\" : \"0058353d-3577-4081-9d93-9d5fce5a882e\",\n  \"username\" : \"DanPrimero\",\n  \"name\": \"Bueno Dan\",\n  \"user_ids\": [\"64416af84f0126292d1ec2bf\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -172,16 +214,16 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "73a33305-dc77-453b-bf74-cb75f3b7ba18",
     "name": "delete",
-    "url": "{{host}}/users/delete?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+    "url": "{{host}}/platforms/delete?uuid=c6170805-5880-4f46-a686-877561dd0ce5",
     "method": "GET",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:02.907Z",
-    "modified": "2023-04-19T19:48:02.903Z",
+    "modified": "2023-04-20T16:45:40.290Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "c6170805-5880-4f46-a686-877561dd0ce5",
         "isPath": false
       }
     ],
@@ -192,19 +234,18 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "c4620340-d0ca-42f8-b573-f87cc0f67d7e",
     "name": "create",
-    "url": "{{host}}/users/create?email=somexx@email.com",
-    "method": "GET",
+    "url": "{{host}}/organizations/create",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:11.072Z",
-    "modified": "2023-04-19T19:48:11.072Z",
+    "modified": "2023-04-20T17:05:45.127Z",
     "headers": [],
-    "params": [
-      {
-        "name": "email",
-        "value": "somexx@email.com",
-        "isPath": false
-      }
-    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\" : \"DanPrimero\",\n  \"name\": \"Daniel\",\n  \"platform_ids\": [\"64416af84f0126292d1ec2bf\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -212,11 +253,11 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "db5b52a8-2aff-4829-af66-ee00a3ab05ed",
     "name": "all",
-    "url": "{{host}}/users/read",
+    "url": "{{host}}/organizations/read",
     "method": "GET",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:11.073Z",
-    "modified": "2023-04-19T19:48:11.072Z",
+    "modified": "2023-04-20T17:01:59.340Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -226,16 +267,16 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "db5b52a8-2aff-4829-af66-ee00a3ab05ed",
     "name": "one",
-    "url": "{{host}}/users/read?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+    "url": "{{host}}/organizations/read?uuid=995b757b-ac78-4d97-8590-b14a41f8e002",
     "method": "GET",
     "sortNum": 50000,
     "created": "2023-04-19T19:48:11.074Z",
-    "modified": "2023-04-19T19:48:11.072Z",
+    "modified": "2023-04-20T17:05:23.784Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "995b757b-ac78-4d97-8590-b14a41f8e002",
         "isPath": false
       }
     ],
@@ -246,19 +287,25 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "f064ef8b-ad8f-42cd-adf0-246650acf524",
     "name": "update",
-    "url": "{{host}}/users/update?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
-    "method": "GET",
+    "url": "{{host}}/organizations/update",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:11.075Z",
-    "modified": "2023-04-19T19:48:11.072Z",
+    "modified": "2023-04-20T17:06:50.600Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "4d4f6867-7cee-4bd9-a9bd-5de5db9ab967",
+        "isDisabled": true,
         "isPath": false
       }
     ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"uuid\": \"4d4f6867-7cee-4bd9-a9bd-5de5db9ab967\",\n  \"username\" : \"DanPrimero\",\n  \"name\": \"Danilo\",\n  \"platform_ids\": [\"64416af84f0126292d1ec2bf\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -266,16 +313,16 @@
     "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
     "containerId": "6372c179-0165-47ba-ac7b-4f84c430bc28",
     "name": "delete",
-    "url": "{{host}}/users/delete?uuid=ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+    "url": "{{host}}/organizations/delete?uuid=995b757b-ac78-4d97-8590-b14a41f8e002",
     "method": "GET",
     "sortNum": 40000,
     "created": "2023-04-19T19:48:11.076Z",
-    "modified": "2023-04-19T19:48:11.072Z",
+    "modified": "2023-04-20T17:07:22.306Z",
     "headers": [],
     "params": [
       {
         "name": "uuid",
-        "value": "ecb6aa52-5c78-4e32-a19b-cca1e401496c",
+        "value": "995b757b-ac78-4d97-8590-b14a41f8e002",
         "isPath": false
       }
     ],

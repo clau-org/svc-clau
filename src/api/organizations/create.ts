@@ -6,31 +6,29 @@ import {
   z,
 } from "../../../deps.ts";
 import { ServiceContext } from "../../service.ts";
-import { createUser } from "../../modules/users/create.ts";
+import { createOrganization } from "../../modules/organizations/create.ts";
 
-export const path = "/users/create";
+export const path = "/organizations/create";
 
 export const schema = z.object({
-  email: z.string().email(),
+  username: z.string().nullish(),
   name: z.string().nullish(),
-  phone: z.string().nullish(),
-  birthDate: z.date().nullish(),
   platform_ids: z.array(schemaId).nullish(),
-  organization_ids: z.array(schemaId).nullish(),
+  user_ids: z.array(schemaId).nullish(),
 }).strict();
 
-const validateUnique = middlewareDbUnique("users", "email");
+const validateUnique = middlewareDbUnique("organizations", "username");
 
 export const middlewares = [validateUnique];
 
 export const handler: Handler = async (ctx) => {
   const { event, db, logger } = ctx as ServiceContext;
 
-  const user = await createUser({ data: event, db });
+  const organization = await createOrganization({ data: event, db });
 
-  logger.log(`[${path}]`, "user created");
+  logger.log(`[${path}]`, "organization created");
 
-  return { data: { user } };
+  return { data: { organization } };
 };
 
 export default defineEventHandler({ path, schema, middlewares, handler });
